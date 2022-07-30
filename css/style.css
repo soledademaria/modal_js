@@ -1,0 +1,90 @@
+body{
+    background-image: url('../assets/bg.jpg');
+
+    padding: 1rem;
+}
+
+h1{
+    margin-bottom: 1rem;
+}
+
+button{
+    padding: .6rem 1.2rem;
+    background: #f00;
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: .7;
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+#open-modal{
+    background: #007bf7;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.6);
+    z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    background-color: rgb(193, 163, 211);
+}
+
+.modal-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fade, #modal{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  
+}
+
+#modal.hide, #fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide{
+    top: 0;
+}
+
+.modal-body p{
+    margin-bottom: 1rem;
+}
+
+.align-center{
+    display: flex;
+    justify-content: center;
+}
